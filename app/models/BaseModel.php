@@ -7,8 +7,12 @@ abstract class BaseModel {
     }
 
     protected function connect() {
-        // Database connection logic here
-        // Example: return new PDO('mysql:host=localhost;dbname=your_db', 'username', 'password');
+        require_once  '../config/database.php';
+        try {
+            return $pdo;
+        } catch (PDOException $e) {
+            die('Database connection failed: ' . $e->getMessage());
+        }
     }
 
     public function query($sql, $params = []) {
