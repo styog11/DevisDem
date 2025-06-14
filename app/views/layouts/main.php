@@ -20,7 +20,7 @@
                 <li class="drawer-toggle">
                         <span class="menu-icon" onclick="sidebarToggle()">☰</span>
                 </li>
-                <li><a href="/devisdem/public/"><img src="../app/views/images/logo.png" height="30" alt=""></a></li>
+                <li><a href="/devisdem"><img src="../devisdem/public/images/logo.png" height="30" alt=""></a></li>
             </ul>
         </nav>
     </header>
@@ -29,8 +29,8 @@
         <h2>Apps</h2>
         <nav class="drawer-nav">
             <ul>
-                <li<?= $_SERVER['REQUEST_URI'] == '/devisdem/public/' ? ' class="active"' : '' ?>><a href="/devisdem/public/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-                <li<?= $_SERVER['REQUEST_URI'] == '/devisdem/public/clients' ? ' class="active"' : '' ?>><a href="/devisdem/public/clients"><i class="fa fa-users"></i>Clients</a></li>
+                <li<?= $_SERVER['REQUEST_URI'] == '/devisdem' ? ' class="active"' : '' ?>><a href="/devisdem/public/"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+                <li<?= $_SERVER['REQUEST_URI'] == '/devisdem/clients' ? ' class="active"' : '' ?>><a href="/devisdem/public/clients"><i class="fa fa-users"></i>Clients</a></li>
             </ul>
         </nav>
     </aside>   
