@@ -39,15 +39,14 @@ try {
     
     $pdo->exec($insertStatusSQL);
     
-    // Create clients table with status_id foreign key
-    $createTableSQL = "
+     $createTableSQL = "
     CREATE TABLE IF NOT EXISTS `clients` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `name` varchar(255) NOT NULL,
         `date_devis` date NOT NULL,
         `tel` varchar(20) DEFAULT NULL,
         `email` varchar(255) DEFAULT NULL,
-        `status_id` varchar(255) DEFAULT '3',
+        `status_ids` varchar(255) DEFAULT '3',
         `date_depart_type` enum('fixed', 'flexible') DEFAULT 'flexible',
         `date_depart` date DEFAULT NULL,
         `date_depart1` date DEFAULT NULL,
@@ -75,9 +74,7 @@ try {
         PRIMARY KEY (`id`),
         INDEX `idx_name` (`name`),
         INDEX `idx_date_devis` (`date_devis`),
-        INDEX `idx_email` (`email`),
-        INDEX `idx_status_id` (`status_id`),
-        FOREIGN KEY (`status_id`) REFERENCES `status`(`id`) ON DELETE SET NULL ON UPDATE CASCADE
+        INDEX `idx_email` (`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
     
     $pdo->exec($createTableSQL);

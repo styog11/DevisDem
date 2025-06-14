@@ -40,17 +40,19 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.drawer-overlay {
+.my-drawer-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 109;
+    background-color: rgba(0, 0, 0, 0.5) !important;
     display: none;
 }
-.drawer-overlay.active {
+.my-drawer-overlay.active {
     display: flex;
+    z-index: 10;
     transition: width 0.5s ease;
 }
 #sidebar {
@@ -132,4 +134,119 @@ main {
 .menu-icon:hover {
     height: 50px;
     transition: height 0.5s ease;
+}
+.title h1 {
+    color: #35424a;
+    font-size: 1.5em;
+    text-align: start;
+    margin: 0 10px;
+    font-weight: bold;
+}
+.title  {
+    color: #99a1b7;
+    font-size: 1em;
+    text-align: start;
+    margin: 0 10px;
+}
+.title .routes {
+    display: flex;
+    margin: 0 10px;
+}
+.title .routes a {
+    color: #35424a;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.title .routes a:hover {
+    color: #636b6f;
+}
+.title .route {
+    display: flex;
+    color: #35424a;
+    font-size: 1em;
+    text-align: start;
+    font-weight: bold;
+    padding: 0 10px;
+}
+.new-clients{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 200px;
+    background-color: #F1416C;
+    padding: 30px;
+    border-radius: 10px;
+    width: 88%;
+    margin: auto;
+    color: #f0f9fe;
+}
+.new-clients h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f0f9fe;
+}
+.new-clients p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #f0f9fe;
+}
+.new-clients .count{
+        margin: 0 auto;
+    width: 95%;
+}
+.new-clients-progress  {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 auto;
+    width: 95%;
+}
+.create-client-container {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: #F9F9F9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 88%;
+}
+.create-client-container i {
+    margin-bottom: 10px;
+    color: #35424a;
+}
+
+
+.create-client-container:hover {
+    background-color: #c8c8c8;
+    transition: background-color 0.5s ease;
+}
+.table-responsive{
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+ .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+ }
+#recent-clients-table td {
+    color: #94969c;
+    font-size: 1.2em;
+}
+#recent-clients-table th {
+    font-size: 0.8em;
+    color: #BFC4D1;
 }

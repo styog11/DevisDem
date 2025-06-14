@@ -24,7 +24,7 @@
             </ul>
         </nav>
     </header>
-    <div class="drawer-overlay" id="drawer-overlay" onclick="sidebarToggle()">
+    <div class="my-drawer-overlay" id="drawer-overlay" onclick="sidebarToggle()">
     <aside id="sidebar" class="drawer" onclick="sidebarToggle();">
         <h2>Apps</h2>
         <nav class="drawer-nav">
@@ -36,6 +36,12 @@
     </aside>   
     </div>
     <main>
+        <div class="title">
+            <h1><?=  $title ?></h1>
+        <div class="routes">
+             <a href="./.">Accueil</a> - <div class="route"><?=  $title ?></div>
+             </div>   
+        </div>
         <?php echo $content; ?>
     </main>
     <footer>
@@ -45,16 +51,5 @@
 		</div>
     </footer>
     <script src="/devisdem/public/js/script.js"></script>
-    <script>
-        function sidebarToggle() {
-    let sideBar = document.querySelector('.drawer-overlay'); 
-    if (sideBar.classList.contains('active')) {
-        sideBar.classList.remove('active');
-    } else {
-        sideBar.classList.toggle('active');
-    }
-}
-
-    </script>
 </body>
 </html>
