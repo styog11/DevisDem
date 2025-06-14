@@ -3,11 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
+    background: #f0f9fe;
+    color: #35424a;
     padding: 10px 0;
     text-align: center;
 }
@@ -22,12 +24,112 @@ h1 {
     overflow: hidden;
 }
 
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+}
+
 footer {
-    background: #35424a;
-    color: #ffffff;
+    background: #f0f9fe;
+    color: #35424a;
     text-align: center;
-    padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.drawer-overlay.active {
+    display: flex;
+    transition: width 0.5s ease;
+}
+#sidebar {
+    background: #35424a;
+    padding: 10px;
+    margin: 0;
+    overflow: hidden;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#sidebar a , li {
+    font-size: 1.2em;
+    margin: 0;
+    text-decoration: none;
+    color: #f0f9fe;
+    display: block;
+    list-style: none;
+    padding: 10px;
+    transition: background 0.5s;
+}
+#sidebar li.active a {
+    background: #636b6f;
+}
+#sidebar a {
+    color: #f0f9fe;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-self: center;
+    align-items: center;
+    
+}
+#sidebar a i {
+    color: #f0f9fe;
+    width: 50px;
+    font-size: 1.5em;
+}
+#sidebar a i:hover {
+    color: #35424a;
+    transition: color 0.5s ease;
+}
+#sidebar a:hover {
+    background: #f0f9fe;
+    color: #35424a;
+    padding: 10px;
+}
+#sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+#sidebar nav {
+    margin: 50px 0;
+}
+main {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #f4f4f4;
+}
+#sidebar h2 {
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.menu-icon {
+    padding: 10px;
+    font-size: 1.8em;
+    color: #35424a;
+    cursor: pointer;
+}
+.menu-icon:hover {
+    height: 50px;
+    transition: height 0.5s ease;
 }
